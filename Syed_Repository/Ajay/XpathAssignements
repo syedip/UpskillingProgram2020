@@ -1,0 +1,22 @@
+Solution : 
+1. xpath of  UserName : //*[@id='UserName']
+or //input[@id='UserName'  and @placeholder='UserName']
+
+xpath of  Password : //*[ @id='Password' ]
+or //input[@id='Password'  and @placeholder='Password']
+
+xpath of Signin : //input[@type='submit' ]
+
+2. xpath of HRMS link : //*[@id='NavigateToHRMS']/i
+
+3. xpath of earned leave : //*[@id='menu1']/div/div[1]/div[1]/div[1]/div[2]/div[1]/span[1]
+xpath of earned leave count : //*[@id='menu1']/div/div[1]/div[1]/div[1]/div[2]/div[1]/span[2]
+
+4. xpath of Search field : //*[@id='empsearch'  and @placeholder='Search an Employee']
+
+--suggestion by Syed 
+
+3. xpath of earned leave : //*[@id='menu1']/div/div[1]/div[1]/div[1]/div[2]/div[1]/span[1]
+Syed -  "//span[contains(.,'Earned')]"
+xpath of earned leave count : //*[@id='menu1']/div/div[1]/div[1]/div[1]/div[2]/div[1]/span[2]
+Syed - "//span[contains(.,'Earned')]/following-sibling::span"    (Following-Sibling means, immediate element under same parent tag.  here im finding next sibling of type span which i have mentioned after  :: )
