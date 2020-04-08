@@ -1,0 +1,18 @@
+  String baseUrl = "https://eag.synechron.com/SYNE.UI/Account/Common/Account/LogOn?ReturnUrl=%2fSYNE.UI";
+ driver.get(baseUrl);
+
+ driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
+ driver.manage().window().maximize();
+
+ System.out.println("EAG Portal is launched");
+
+
+ WebElement welcome_Text= driver.findElement(By.xpath("//*[@class='welcomeTitle']"));
+  System.out.println(welcome_Text.getText() + "  is displayed!");  // This was not a mistake, i have used getText method to display meaning full message. else it will give object information.
+ 
+ WebElement username=driver.findElement(By.xpath("//input[@id='UserName'  and @placeholder='Username']"));  // Here 'N' was in uppercase for placeholder. i changed back to lowercase.
+  WebElement password=driver.findElement(By.xpath("//input[@id='Password'  and @placeholder='Password'] "));
+  WebElement login=driver.findElement(By.xpath("//input[@type='submit' ] "));
+  username.sendKeys("ajay.kushwah");
+  password.sendKeys("welcome");
+   login.click();
